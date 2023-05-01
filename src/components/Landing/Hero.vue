@@ -2,8 +2,8 @@
 <template>
   <div class="relative isolate overflow-hidden bg-gray-900">
     <img
-      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-      alt="" class="absolute inset-0 -z-10 h-full w-full object-cover" />
+      src="https://images.unsplash.com/photo-1682176162464-3a11b5ea3774?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+      alt="" class="opacity-30 absolute inset-0 -z-10 h-full w-full object-cover" />
     <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
       <svg
         class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -25,7 +25,7 @@
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-            <img class="brightness-200 h-12 w-auto" src="/logo.png" alt="" />
+            <img class="brightness-200 opacity-100 h-18 w-auto" src="/logo.png" alt="" />
           </a>
         </div>
         <div class="flex lg:hidden">
@@ -49,7 +49,7 @@
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
-              <img class="brightness-200 h-12 w-auto" src="/logo.png" alt="" />
+              <img class="brightness-200 opacity-100 h-18 w-auto" src="/logo.png" alt="" />
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = false">
               <span class="sr-only">Close menu</span>
@@ -74,7 +74,8 @@
       </Dialog>
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div class="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20"> Announcing our next round of funding.
+          <div class="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-100 ring-1 ring-white/10 hover:ring-white/20">
+            Unsere Zeitschrift "Humanität" jetzt in digitaler Form erhältlich |
             <a href="#" class="font-semibold text-white">
               <span class="absolute inset-0" aria-hidden="true" />
               Mehr erfahren
@@ -83,18 +84,19 @@
           </div>
         </div>
         <div class="text-center">
-          <h1 class="text-3xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1 class="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
             Großloge der Alten Freien und Angenommenen Maurer von Deutschland (AFuAMvD)
           </h1>
           <p class="mt-6 text-lg leading-8 text-gray-300">
-            dddddd
+
           </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#"
-              class="rounded-md bg-indigo-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get
-              started</a>
-            <a href="#" class="text-base font-semibold leading-7 text-white">Learn more <span
-                aria-hidden="true">→</span></a>
+            <a href="#about"
+              class="w-1/2 rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+            Mehr erfahren
+            </a>
+           <!--  <a href="#" class="text-base font-semibold leading-7 text-white">Learn more <span
+                aria-hidden="true">→</span></a> -->
           </div>
         </div>
       </div>
@@ -131,3 +133,9 @@ const navigation = [
 
 const mobileMenuOpen = ref(false)
 </script>
+
+<style>
+* {
+  scroll-behavior: smooth;
+}
+</style>

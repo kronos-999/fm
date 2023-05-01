@@ -1,5 +1,5 @@
 <template>
-  <section class="overflow-hidden bg-white">
+  <section class="overflow-hidden bg-white" id="about">
     <div class="relative mx-auto max-w-7xl px-6 pt-20 pb-12 lg:px-8 lg:py-20">
       <svg class="absolute top-full left-0 translate-x-80 -translate-y-24 transform lg:hidden" width="784" height="404"
         fill="none" viewBox="0 0 784 404" aria-hidden="true">
