@@ -24,7 +24,7 @@ const navigation = {
   main: [
    { name: 'Start', href: '/' },
     { name: 'Informationen', href: '/' },
-    { name: 'Kommentare', href: '/' },
+    { name: 'Blog', href: '/' },
     { name: 'Großloge', href: '/' },
     { name: 'Distrikte', href: '/' },
     { name: 'Newsletter', href: '#newsletter' },

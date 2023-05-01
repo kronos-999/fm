@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     About: typeof import('./components/Landing/About.vue')['default']
     BlogPosts: typeof import('./components/Blog/BlogPosts.vue')['default']
     CTA: typeof import('./components/Landing/CTA.vue')['default']
+    DropdownItem: typeof import('./components/Menu/DropdownItem.vue')['default']
     FlyoutMenuSingle: typeof import('./components/Menu/FlyoutMenuSingle.vue')['default']
     Footer: typeof import('./components/Menu/Footer.vue')['default']
     Hero: typeof import('./components/Landing/Hero.vue')['default']

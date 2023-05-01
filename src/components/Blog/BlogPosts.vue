@@ -21,7 +21,7 @@
           <div class="flex-1 bg-white p-6 flex flex-col justify-between">
             <div class="flex-1">
               <p class="text-sm font-medium text-indigo-600">
-                <a :href="post.category.href" class="hover:underline">
+                <a :href="post.href" class="hover:underline">
                   {{ post.category.name }}
                 </a>
               </p>

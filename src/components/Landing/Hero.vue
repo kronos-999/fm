@@ -130,7 +130,7 @@ import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 const navigation = [
   { name: 'Start',               href: '#' },
   { name: 'Informationen',       href: '#' },
-  { name: 'Kommentare',          href: '#' },
+  { name: 'Blog',          href: '#' },
   { name: 'Großloge',            href: '#' },
   { name: 'Distrikte',           href: '#' },
   { name: 'Newsletter',          href: '#newsletter' },
