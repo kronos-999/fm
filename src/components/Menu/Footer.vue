@@ -27,7 +27,7 @@ const navigation = {
     { name: 'Blog', href: '/' },
     { name: 'Großloge', href: '/' },
     { name: 'Distrikte', href: '/' },
-    { name: 'Newsletter', href: '#newsletter' },
+    { name: 'Newsletter', href: '#' },
     { name: 'Mehr', href: '/' },
     { name: 'Suche', href: '/' },
     { name: 'Veranstaltungen', href: '/' },

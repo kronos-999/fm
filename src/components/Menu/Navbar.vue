@@ -16,11 +16,9 @@
             <img class="brightness-200 block h-8 w-auto lg:hidden" src="/logo.png" />
             <img class="brightness-200 hidden h-8 w-auto lg:block" src="/logo.png" />
           </div>
-          <div class="hidden sm:ml-6 lg:block">
-            <div class="flex space-x-4">
-              <a v-for="item in navigation" :key="item.name" :href="item.href"
-                :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']"
-                :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+          <div class="hidden sm:ml-6 lg:flex items-center">
+            <div class="flex gap-x-4">
+              <DropdownItem v-for="nav in navigation" :key="nav.title" :title="nav.title" :href="nav.href" :items="nav.items" />
             </div>
           </div>
         </div>
@@ -28,27 +26,83 @@
     </div>
 
     <DisclosurePanel class="lg:hidden">
-      <div class="space-y-1 px-2 pb-3 pt-2">
-        <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href"
-          :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium']"
-          :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+      <div class="px-2 pb-3 pt-2">
+        <div class="my-3" v-for="nav in navigation" :key="nav.title">
+          <a class="text-lg font-md" v-if="!!nav?.href" :href="nav?.href">
+            {{ nav.title }}
+          </a>
+          <button type="button" class="text-lg font-md" @click="nav.isMobileOpen = !nav.isMobileOpen" v-else>
+            <span class="flex items-center gap-x-2">
+              {{ nav.title }}
+              <ChevronDownIcon class="flex h-4 w-4" v-if="nav?.items?.length && nav.isMobileOpen == true" />
+              <ChevronUpIcon   class="flex h-4 w-4" v-if="nav?.items?.length && nav.isMobileOpen == false" />
+            </span>
+          </button>
+          <ul class="block" v-if="!nav?.href && nav?.items?.length && nav.isMobileOpen == true">
+            <li class="ml-3" v-for="link in nav.items">
+              <a class="text-sm font-md" :href="link.href">
+                {{ link.title }}
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
   </DisclosurePanel>
 </Disclosure></template>
 
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { Bars3BottomRightIcon, XMarkIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/vue/24/outline'
 
-const navigation = [
-  { name: 'Start',           current:false, href: '/' },
-  { name: 'Informationen',   current:false, href: '/' },
-  { name: 'Blog',            current:false, href: '/' },
-  { name: 'Großloge',        current:false, href: '/' },
-  { name: 'Distrikte',       current:false, href: '/' },
-  { name: 'Newsletter',      current:false, href: '#newsletter' },
-  { name: 'Mehr',            current:false, href: '/' },
-  { name: 'Suche',           current:false, href: '/' },
-  { name: 'Veranstaltungen', current:false, href: '/' },
-]
+const navigation = reactive([
+  {
+    title: 'Start',
+    href: '/',
+  },
+  {
+    title: 'Informationen',
+    href: '/',
+  },
+  {
+    title: 'Blog',
+    href: '/',
+  },
+  {
+    title: 'Großloge',
+    href: '/',
+  },
+  {
+    title: 'Distrikte',
+    isMobileOpen: false,
+    items: [
+      { title: "Baden-Württemberg", href: "#amk" },
+      { title: "Bayern", href: "#" },
+      { title: "Berlin / Brandenburg", href: "#" },
+      { title: "Bremen", href: "#" },
+      { title: "Hamburg", href: "#" },
+      { title: "Hessen / Thüringen", href: "#" },
+      { title: "Niedersachsen / Sachsen-Anhalt", href: "#" },
+      { title: "Nordrhein-Westfalen", href: "#" },
+      { title: "Rheinland-Pfalz / Saarland", href: "#" },
+      { title: "Sachsen", href: "#" },
+      { title: "Schleswig-Holstein / Mecklenburg-Vorpommern", href: "#" },
+    ]
+  },
+  {
+    title: 'Newsletter',
+    href: '/',
+  },
+  {
+    title: 'Mehr',
+    href: '/',
+  },
+  {
+    title: 'Suche',
+    href: '/',
+  },
+  {
+    title: 'Veranstaltungen',
+    href: '/',
+  },
+])
 </script>
