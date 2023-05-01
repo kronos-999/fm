@@ -35,26 +35,21 @@
               </a>
             </div>
             <div class="mt-6 flex items-center">
-              <div class="flex-shrink-0">
-                <a :href="post.author.href">
-                  <span class="sr-only">{{ post.author.name }}</span>
-                  <img class="h-10 w-10 rounded-full" :src="post.author.imageUrl" alt="" />
-                </a>
-              </div>
-              <div class="ml-3">
-                <p class="text-sm font-medium text-gray-900">
-                  <a :href="post.author.href" class="hover:underline">
-                    {{ post.author.name }}
+              <div class="w-full">
+                <div class="w-full flex items-center justify-between space-x-1 text-sm text-gray-500">
+                  <div class="">
+                    <time :datetime="post.datetime">
+                      {{ post.date }}
+                    </time>
+                    <span aria-hidden="true">
+                      &middot;
+                    </span>
+                    <span> {{ post.readingTime }} Lesezeit </span>
+                  </div>
+
+                  <a :href="post.href" class="rounded-md bg-indigo-600 px-2 py-1 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+                    Weiterlesen
                   </a>
-                </p>
-                <div class="flex items-center space-x-1 text-sm text-gray-500">
-                  <time :datetime="post.datetime">
-                    {{ post.date }}
-                  </time>
-                  <span aria-hidden="true">
-                    &middot;
-                  </span>
-                  <span> {{ post.readingTime }} Lesezeit </span>
                 </div>
               </div>
             </div>
@@ -69,48 +64,33 @@
 const posts = [
   {
     title: 'Masonicum in Walkenried',
-    href: '#',
+    href: '/1',
     category: { name: 'DISTRIKT NIEDERSACHSEN / SACHSEN-ANHALT', href: '#' },
     description: 'Zum 40. Mal treffen sich Freimaurer und seit einigen Jahren auch Freimaurerinnen im Harz zu einem Masonicum.',
     date: '27. April 2023',
     datetime: '2023-04-27',
     imageUrl: 'https://www.freimaurerei.de/wp-content/uploads/2023/04/AdobeStock_403005152.jpeg',
     readingTime: '6 Min',
-    author: {
-      name: 'Roel Aufderehar',
-      href: '#',
-      imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
   },
   {
     title: '175-Jahrfeier Frankfurter Pauls­kirchen­parlament',
-    href: '#',
+    href: '/2',
     category: { name: 'DISTRIKT HESSEN / THÜRINGEN', href: '#' },
     description: 'Das Paulskirchenparlament von 1848 gilt als Wiege der deutschen Demokratie und hat einen engen freimaurerischen Bezug.',
     date: '27. April 2023',
     datetime: '2023-04-27',
     imageUrl: 'https://www.freimaurerei.de/wp-content/uploads/2023/04/AdobeStock_216408385.jpeg',
     readingTime: '4 Min',
-    author: {
-      name: 'Brenna Goyette',
-      href: '#',
-      imageUrl: 'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
   },
   {
     title: "Jahresbeginnfeier der Loge 'Eleusis zur Verschwiegenheit'",
-    href: '#',
+    href: '/3',
     category: { name: 'DISTRIKT BAYERN', href: '#' },
     description: "Guter Tradition entsprechend, haben die Brüder und Schwestern der Bayreuther Loge „Eleusis zur Verschwiegenheit“ auch das Jahr 2023 mit einer künstlerischen Darbietung begonnen.",
     date: '13. April 2023',
     datetime: '2023-04-13',
     imageUrl: 'https://www.freimaurerei.de/wp-content/uploads/2023/04/20230107_183735.jpg.webp',
     readingTime: '11 Min',
-    author: {
-      name: 'Daniela Metz',
-      href: '#',
-      imageUrl: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
   },
 ]
 </script>

@@ -29,19 +29,22 @@
           </a>
         </div>
         <div class="flex lg:hidden">
+          <a href="#" class="text-xl font-semibold leading-6 text-white">AFuAMvD</a>
+        </div>
+        <div class="flex lg:hidden">
           <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
             @click="mobileMenuOpen = true">
             <span class="sr-only">Open main menu</span>
-            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+            <Bars3BottomRightIcon class="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
           <a v-for="item in navigation" :key="item.name" :href="item.href"
             class="text-sm font-semibold leading-6 text-white">{{ item.name }}</a>
-          <FlyoutMenuSingle />
+          <!-- <FlyoutMenuSingle /> -->
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <!-- <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span aria-hidden="true">&rarr;</span></a> -->
         </div>
       </nav>
       <Dialog as="div" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -61,13 +64,13 @@
               <div class="space-y-2 py-6">
                 <a v-for="item in navigation" :key="item.name" :href="item.href"
                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10">{{ item.name }}</a>
-                <FlyoutMenuSingle />
+                <!-- <FlyoutMenuSingle /> -->
               </div>
-              <div class="py-6">
+              <!-- <div class="py-6">
                 <a href="#"
                   class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-white hover:bg-gray-400/10">Log
                   in</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </DialogPanel>
@@ -122,13 +125,18 @@
 <script setup>
 import { ref } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 const navigation = [
-  { name: 'Product',     href: '#' },
-  { name: 'Features',    href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company',     href: '#' },
+  { name: 'Start',               href: '#' },
+  { name: 'Informationen',       href: '#' },
+  { name: 'Kommentare',          href: '#' },
+  { name: 'Großloge',            href: '#' },
+  { name: 'Distrikte',           href: '#' },
+  { name: 'Newsletter',          href: '#newsletter' },
+  { name: 'Mehr',                href: '#' },
+  { name: 'Suche',               href: '#' },
+  { name: 'Veranstaltungen',     href: '#' },
 ]
 
 const mobileMenuOpen = ref(false)

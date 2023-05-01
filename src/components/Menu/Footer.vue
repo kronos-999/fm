@@ -48,7 +48,7 @@
           <p class="mt-2 text-sm leading-6 text-gray-600">
             Die neuesten Nachrichten, Artikel und Ressourcen: Wöchentlich per Newsletter direkt an Ihre E-Mail-Adresse gesendet.
           </p>
-          <form class="mt-6 sm:flex sm:max-w-md items-center">
+          <form class="mt-6 sm:flex sm:max-w-md items-center" id="newsletter">
             <label for="email-address" class="sr-only">Email Adresse</label>
             <input type="email" name="email-address" id="email-address" autocomplete="email" required=""
               class="w-full min-w-0 appearance-none rounded-md border-gray-300 bg-white px-3 py-2 text-base leading-7 text-gray-900 placeholder-gray-400 shadow-sm outline-none border-indigo-500 ring-2 ring-indigo-500 focus:(border-indigo-600 ring-2 ring-indigo-600) sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
