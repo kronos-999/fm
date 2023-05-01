@@ -19,6 +19,7 @@
         </defs>
       </svg>
     </div>
+    <!-- CAN BE DELETED -->
     <div class="px-6 lg:px-8">
       <nav class="flex items-center justify-between pt-6" aria-label="Global">
         <div class="flex lg:flex-1">
