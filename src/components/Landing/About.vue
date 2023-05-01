@@ -22,7 +22,7 @@
         </defs>
         <rect width="404" height="784" fill="url(#56409614-3d62-4985-9a10-7ca758a8f4f0)" />
       </svg>
-      <!-- DO NOT FORGET THE SLASH AFTER SRC: -->
+      <!-- DO NOT FORGET THE SLASH AFTER SRC: AMK -->
       <div class="relative lg:flex lg:items-center">
         <div class="hidden lg:block lg:flex-shrink-0">
           <img class="h-64 w-64 rounded-full xl:h-80 xl:w-80"
