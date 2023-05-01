@@ -54,7 +54,7 @@
                   <span aria-hidden="true">
                     &middot;
                   </span>
-                  <span> {{ post.readingTime }} read </span>
+                  <span> {{ post.readingTime }} Lesezeit </span>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 const posts = [
   {
     title: 'Masonicum in Walkenried',
@@ -75,7 +75,7 @@ const posts = [
     date: '27. April 2023',
     datetime: '2023-04-27',
     imageUrl: 'https://www.freimaurerei.de/wp-content/uploads/2023/04/AdobeStock_403005152.jpeg',
-    readingTime: '6 min',
+    readingTime: '6 Min',
     author: {
       name: 'Roel Aufderehar',
       href: '#',
@@ -90,7 +90,7 @@ const posts = [
     date: '27. April 2023',
     datetime: '2023-04-27',
     imageUrl: 'https://www.freimaurerei.de/wp-content/uploads/2023/04/AdobeStock_216408385.jpeg',
-    readingTime: '4 min',
+    readingTime: '4 Min',
     author: {
       name: 'Brenna Goyette',
       href: '#',
@@ -105,7 +105,7 @@ const posts = [
     date: '13. April 2023',
     datetime: '2023-04-13',
     imageUrl: 'https://www.freimaurerei.de/wp-content/uploads/2023/04/20230107_183735.jpg.webp',
-    readingTime: '11 min',
+    readingTime: '11 Min',
     author: {
       name: 'Daniela Metz',
       href: '#',
@@ -113,12 +113,4 @@ const posts = [
     },
   },
 ]
-
-export default {
-  setup() {
-    return {
-      posts,
-    }
-  },
-}
 </script>

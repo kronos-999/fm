@@ -101,8 +101,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
+        name: 'AFuAMvD',
+        short_name: 'AFuAMvD',
         theme_color: '#ffffff',
         icons: [
           {
@@ -111,12 +111,12 @@ export default defineConfig({
             type: 'image/png',
           },
           {
-            src: '/pwa-512x512.png',
+            src: '/pwa-192x192.png',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: '/pwa-512x512.png',
+            src: '/pwa-192x192.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable',
