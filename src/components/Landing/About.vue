@@ -55,7 +55,7 @@
               <div class="flex">
                 <div class="flex-shrink-0 lg:hidden">
                   <img class="h-12 w-12 rounded-full"
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    src="/stefan_kunnert.jpeg"
                     alt="" />
                 </div>
                 <div class="ml-4 lg:ml-0">
