@@ -26,7 +26,7 @@
       <div class="relative lg:flex lg:items-center">
         <div class="hidden lg:block lg:flex-shrink-0">
           <img class="h-64 w-64 rounded-full xl:h-80 xl:w-80"
-            src="stefan_kunnert.jpeg"
+            src="/stefan_kunnert.jpeg"
             alt="" />
         </div>
 
