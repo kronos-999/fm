@@ -19,7 +19,6 @@
         </defs>
       </svg>
     </div>
-    <!-- CAN BE DELETED -->
     <div class="px-6 lg:px-8">
       <nav class="flex items-center justify-between pt-6" aria-label="Global">
         <div class="flex lg:flex-1">
@@ -28,7 +27,7 @@
             <img class="brightness-200 opacity-100 h-18 w-auto" src="/logo.png" alt="" />
           </a>
         </div>
-        <div class="flex lg:hidden">
+        <div class="flex md:hidden">
           <a href="#" class="text-xl font-semibold leading-6 text-white">AFuAMvD</a>
         </div>
         <div class="flex lg:hidden">
